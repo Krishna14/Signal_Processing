@@ -1,0 +1,1538 @@
+Model {
+  Name			  "high_level"
+  Version		  7.0
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.74"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  PreLoadFcn		  "load one_stage.mat"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Tue Feb 13 11:09:06 2007"
+  Creator		  "abehbood"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "abehbood"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Sep 13 11:22:43 2007"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "1.%<AutoIncrement:74>"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.3.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.3.0"
+	  StartTime		  "0.0"
+	  StopTime		  "24/3000"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-6"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ZeroCrossControl	  "DisableAll"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.3.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "StructureWithTime"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.3.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.3.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.3.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  RTWCompilerOptimization "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		13
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  11
+	  Description		  "HDL Coder custom configuration component"
+	  Version		  "1.3.0"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	SSC.SimscapeCC {
+	  $ObjectID		  12
+	  Name			  "Simscape"
+	  EditingMode		  "Full"
+	  Version		  "1.0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Clock
+      DisplayTime	      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      ShowOutputPort	      off
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "fixdt(1,16,0)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "[]"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      IconShape		      "rectangular"
+      AllPortsSameDT	      on
+      OutDataTypeMode	      "Logical (see Configuration Parameters: Optimization)"
+      LogicDataType	      "uint(8)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SignalViewerScope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+      Disabled		      off
+      ScrollMode	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RateTransition
+      Integrity		      on
+      Deterministic	      on
+      X0		      "0"
+      OutPortSampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SignalSpecification
+      Dimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      TriggerPort
+      TriggerType	      "rising"
+      StatesWhenEnabling      "inherit"
+      ShowOutputPort	      off
+      OutputDataType	      "auto"
+      SampleTimeType	      "triggered"
+      SampleTime	      "1"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      LogicOutDataTypeMode    "Logical (see Configuration Parameters: Optimization)"
+      LogicDataType	      "uint(8)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Trigonometry
+      Operator		      "sin"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "high_level"
+    Location		    [283, 224, 1315, 555]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    212
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "86"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Analog\n Section"
+      Ports		      [1, 1]
+      Position		      [260, 127, 545, 223]
+      BackgroundColor	      "[0.752941, 0.752941, 0.752941]"
+      FontSize		      18
+      FontWeight	      "bold"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      System {
+	Name			"Analog\n Section"
+	Location		[166, 688, 1604, 1051]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"142"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Analog In"
+	  Position		  [20, 34, 50, 46]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "1 bit DAC"
+	  Ports			  [1, 1]
+	  Position		  [590, 30, 705, 70]
+	  ShowName		  off
+	  FontSize		  12
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    0
+	    PropName		    "AvailSigsLoadSave"
+	  }
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Embedded MATLAB block"
+	  MaskDisplay		  "disp('DAC_1_bit');"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "1 bit DAC"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "u"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      Ports		      [1, 1]
+	      Position		      [270, 160, 320, 200]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      " SFunction "
+	      Tag		      "Stateflow S-Function high_level 1"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 160]
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[1 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"y"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      Position		      [460, 171, 480, 189]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      Points		      [0, 65]
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "u"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "y"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Clock1"
+	  Ports			  [0, 1]
+	  Position		  [350, 59, 395, 91]
+	  ShowName		  off
+	  FontSize		  14
+	  SourceBlock		  "simulink_extras/Flip Flops/Clock"
+	  SourceType		  "Digital clock"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  MaskParam1		  "1/(48e3*64)"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Comparator"
+	  Ports			  [1, 1]
+	  Position		  [260, 20, 315, 60]
+	  FontSize		  14
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  ">="
+	  LogicOutDataTypeMode	  "boolean"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [400, 130, 430, 160]
+	  Orientation		  "up"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "D Flip-Flop"
+	  Ports			  [3, 2]
+	  Position		  [470, 21, 525, 129]
+	  SourceBlock		  "simulink_extras/Flip Flops/D Flip-Flop"
+	  SourceType		  "DFlipFlop"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1]
+	  Position		  [170, 12, 215, 68]
+	  FontSize		  14
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition"
+	  Position		  [800, 19, 860, 81]
+	  OutPortSampleTime	  "1/(48e3*64)"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [95, 25, 125, 55]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  Position		  [555, 130, 585, 160]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Bit Stream Out"
+	  Position		  [955, 43, 985, 57]
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  DstBlock		  "Comparator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Comparator"
+	  SrcPort		  1
+	  DstBlock		  "D Flip-Flop"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Analog In"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "D Flip-Flop"
+	  SrcPort		  2
+	  Points		  [40, 0]
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Clock1"
+	  SrcPort		  1
+	  DstBlock		  "D Flip-Flop"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "D Flip-Flop"
+	  SrcPort		  1
+	  DstBlock		  "1 bit DAC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [0, -15]
+	  DstBlock		  "D Flip-Flop"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "1 bit DAC"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, 165; -630, 0]
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Rate Transition"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Rate Transition"
+	  SrcPort		  1
+	  DstBlock		  "Bit Stream Out"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Chirp Signal"
+      Ports		      [0, 1]
+      Position		      [30, 137, 95, 213]
+      FontSize		      18
+      FontWeight	      "bold"
+      SourceBlock	      "simulink/Sources/Chirp Signal"
+      SourceType	      "chirp"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      f1		      ".1"
+      T			      "6/3000"
+      f2		      "1000"
+      VectorParams1D	      on
+      Port {
+	PortNumber		1
+	Name			"Analog Input"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Digital\nSection"
+      Ports		      [1, 1]
+      Position		      [620, 127, 915, 223]
+      BackgroundColor	      "[1.000000, 0.501961, 0.250980]"
+      FontSize		      18
+      FontWeight	      "bold"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Port {
+	PortNumber		1
+	Name			"Digtial Output"
+	PropagatedSignals	"Digital Output\n48 KHz"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"Digital\nSection"
+	Location		[508, 372, 1122, 567]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Bit Stream In"
+	  Position		  [25, 68, 55, 82]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "One Stage Decimation\nDigital Filter"
+	  Tag			  "BlockMethodSubSystem"
+	  RequirementInfo	  "{'other' 'AD1877.pdf' '#4' 'true' 'ADI AD1877 Data Sheet' '' } %GIDa_d1d2fa04_4bf1_46ae_af99_e9f39951ee86"
+	  Ports			  [1, 1]
+	  Position		  [165, 28, 430, 122]
+	  BackgroundColor	  "[0.905882, 0.478431, 0.219608]"
+	  DialogController	  "dspdialog.FIRDecimation"
+	  DialogControllerArgs	  "DataTag0"
+	  FontSize		  18
+	  SourceBlock		  "dspmlti4/FIR\nDecimation"
+	  SourceType		  "FIR Decimation"
+	  h			  "[1.55406407911568e-005 -4.02976869344532e-006 -3.62744882919974e-006 -3.32415900794419e-006 -3.10004007346292e-006 -2.94488775900927e-006 -2.84407867825443e-006 -2.79175810569639e-006 -2.77680534274625e-006 -2.79636876946116e-006 -2.84159739559419e-006 -2.91172216432913e-006 -2.99938731666961e-006 -3.10526988821609e-006 -3.22293122491583e-006 -3.35411175577608e-006 -3.49288760841827e-006 -3.64182441067023e-006 -3.79519422790614e-006 -3.95625120366779e-006 -4.11924776887857e-006 -4.28807690784027e-006 -4.45674935295447e-006 -4.62985561457222e-006 -4.800897058436e-006 -4.9753188968358e-006 -5.14579209170125e-006 -5.31896147362731e-006 -5.48613787011061e-006 -5.65584148286576e-006 -5.81687994870294e-006 -5.98156442936665e-006 -6.1319779994032e-006 -6.29670705116336e-006 -6.41916030653874e-006 -6.5873274394144e-006 -6.7177176233061e-006 -6.82652503989139e-006 -6.95495460798152e-006 -7.07534295461106e-006 -7.1850354195168e-006 -7.27502374181979e-006 -7.35666591949478e-006 -7.42908966098812e-006 -7.49731879243244e-006 -7.55554016300166e-006 -7.60384694343128e-006 -7.63736428406282e-006 -7.65751209128601e-006 -7.66271823557677e-006 -7.65541155261304e-006 -7.63501627507501e-006 -7.60282107295533e-006 -7.55771586095076e-006 -7.49955110139743e-006 -7.42707797821989e-006 -7.33956971085392e-006 -7.23653893398005e-006 -7.11727392514411e-006 -6.98238367840012e-006 -6.83104946879514e-006 -6.66483440906746e-006 -6.48225897487408e-006 -6.28578538645417e-006 -6.07254142810829e-006 -5.84668058135014e-006 -5.60212405026277e-006 -5.34827643472346e-006 -5.07102301413336e-006 -4.78659690402004e-006 -4.48580556034723e-006 -4.16155600384522e-006 -3.83401955134294e-006 -3.48874328670483e-006 -3.12800075717904e-006 -2.75159431264472e-006 -2.36710798789534e-006 -1.97052071697094e-006 -1.56289826517329e-006 -1.1415501968765e-006 -7.10846494538715e-007 -2.70732289220279e-007 1.75793679903884e-007 6.30605543525479e-007 1.09226506478532e-006 1.56189731593155e-006 2.03697170915753e-006 2.51723717113145e-006 3.00015723143587e-006 3.48579071809432e-006 3.9725933377886e-006 4.46080384428176e-006 4.9490441253173e-006 5.43679761975195e-006 5.92239585030302e-006 6.40461366377309e-006 6.88208470617973e-006 7.35331974962638e-006 7.81788083672163e-006 8.27366149467831e-006 8.72161880365281e-006 9.15789014754869e-006 9.58466277051695e-006 9.99868488513386e-006 1.03961241773662e-005 1.07845165019174e-005 1.11507237228684e-005 1.1501595755956e-005 1.18347779752421e-005 1.21491508417921e-005 1.24402661260835e-005 1.27113476734474e-005 1.29603423782727e-005 1.31870907689413e-005 1.33876586413025e-005 1.35630197026232e-005 1.37115784405412e-005 1.38343308497875e-005 1.39285220410779e-005 1.39941223446797e-005 1.40289966823036e-005 1.40342134443906e-005 1.40084936488381e-005 1.39526353305602e-005 1.3864821369379e-005 1.37453066068296e-005 1.35925703287186e-005 1.34073463479953e-005 1.3188789625357e-005 1.29377174450497e-005 1.26533131128865e-005 1.23359924862388e-005 1.19851377636711e-005 1.16010858578809e-005 1.11839953027825e-005 1.07344849783013e-005 1.02524591509204e-005 9.74071213530745e-006 9.19501972815777e-006 8.62303106439748e-006 8.0182133965873e-006 7.38519650181956e-006 6.72464037253548e-006 6.03717286198122e-006 5.32193639834688e-006 4.58308951056204e-006 3.82060966862603e-006 3.03594631004846e-006 2.22877471347222e-006 1.40249577164911e-006 5.57771396078279e-007 -3.03081212010611e-007 -1.18011136255105e-006 -2.0703284116168e-006 -2.97257001796215e-006 -3.8836096780257e-006 -4.80290798314314e-006 -5.72785477296596e-006 -6.65770229898759e-006 -7.58923677050474e-006 -8.52121235074221e-006 -9.45049303838782e-006 -1.03761550722017e-005 -1.12952557815384e-005 -1.22066400703126e-005 -1.31069929510391e-005 -1.39948646063552e-005 -1.48669844016962e-005 -1.5722291797911e-005 -1.6557361960285e-005 -1.73721743499725e-005 -1.81614198379814e-005 -1.89271227804299e-005 -1.96621709077627e-005 -2.03681220570147e-005 -2.10414746689456e-005 -2.16795973059757e-005 -2.22809929088541e-005 -2.28449636140741e-005 -2.33674682904989e-005 -2.38475378981462e-005 -2.42832630281073e-005 -2.46737271282319e-005 -2.50157122578988e-005 -2.53086471842211e-005 -2.55507406182284e-005 -2.57416490422431e-005 -2.58786936957182e-005 -2.59612596769591e-005 -2.59874463485179e-005 -2.59574541767688e-005 -2.58694517147958e-005 -2.57233485881017e-005 -2.55174472576414e-005 -2.52523122435392e-005 -2.49268338634968e-005 -2.45417713310435e-005 -2.40958358926005e-005 -2.35898069807831e-005 -2.30227257416574e-005 -2.23960563221684e-005 -2.1709188407436e-005 -2.09640725140508e-005 -2.01596324687454e-005 -1.92987549946551e-005 -1.83796636451349e-005 -1.74065609468611e-005 -1.6378107825718e-005 -1.5297239076741e-005 -1.4165563322453e-005 -1.29837062437593e-005 -1.17538614601501e-005 -1.04789934919347e-005 -9.15984671661692e-006 -7.79942657099687e-006 -6.40019637438412e-006 -4.96506454941461e-006 -3.4953924475679e-006 -1.99471514387164e-006 -4.65592957013276e-007 1.08842224316742e-006 2.66529435443319e-006 4.26104414462528e-006 5.87280826839564e-006 7.49643115453994e-006 9.12948832550836e-006 1.07679108350554e-005 1.24087589945457e-005 1.40473763916787e-005 1.56808270505772e-005 1.73046918195343e-005 1.89161718301667e-005 2.05105529810757e-005 2.20848127005043e-005 2.36340926884087e-005 2.51557251724037e-005 2.66447234236773e-005 2.80987221645528e-005 2.95120906314855e-005 3.08827868258143e-005 3.22054075260706e-005 3.34774445821306e-005 3.46953231137004e-005 3.58547255333079e-005 3.69530754009405e-005 3.7986718010505e-005 3.89514640803226e-005 3.98452181863933e-005 4.06645239027052e-005 4.14063450222028e-005 4.2067550552745e-005 4.26462932889378e-005 4.31392543732828e-005 4.35442864996768e-005 4.38589048428408e-005 4.4081910004587e-005 4.42107040325615e-005 4.42439031675609e-005 4.41794969520443e-005 4.40169537563336e-005 4.37545757687923e-005 4.33919182785264e-005 4.29276808144418e-005 4.23622309994709e-005 4.16947899366796e-005 4.09259201198379e-005 4.00549607038057e-005 3.90830515503957e-005 3.80102108467889e-005 3.68383548705271e-005 3.55677060006238e-005 3.42006433441466e-005 3.27376965139159e-005 3.11817602984986e-005 2.95344286283765e-005 2.77980966549151e-005 2.59758986650618e-005 2.40696804062534e-005 2.20831406101238e-005 2.00197755163465e-005 1.78823051566146e-005 1.567528259524e-005 1.34023056420664e-005 1.10673615684488e-005 8.67455494003521e-006 6.22921233115785e-006 3.73548706935855e-006 1.19850479991657e-006 -1.37690015889026e-006 -3.98496928427692e-006 -6.62104231315159e-006 -9.27931239254005e-006 -1.19543963278102e-005 -1.46399411218251e-005 -1.73306829349789e-005 -2.0020366036299e-005 -2.27033984887462e-005 -2.53730414981784e-005 -2.8023652582783e-005 -3.06486440924228e-005 -3.32423601744765e-005 -3.57979409015787e-005 -3.83096776799284e-005 -4.07708175607804e-005 -4.31759118228741e-005 -4.55182053122891e-005 -4.779201665393e-005 -4.99909212744647e-005 -5.21089409728238e-005 -5.41407879808797e-005 -5.60801067454271e-005 -5.79219488969705e-005 -5.96606505041286e-005 -6.12904227247645e-005 -6.28070509789246e-005 -6.42049666629587e-005 -6.54796411125225e-005 -6.662656879111e-005 -6.76417216034933e-005 -6.85204276407002e-005 -6.92595253174921e-005 -6.98553329208555e-005 -7.03047513995788e-005 -7.06042793674669e-005 -7.07517966531855e-005 -7.07446375604347e-005 -7.05809929569828e-005 -7.02587675927147e-005 -6.97771449563401e-005 -6.91347367635392e-005 -6.83310932195394e-005 -6.73653848913012e-005 -6.62381539718908e-005 -6.49495379764627e-005 -6.35006772151759e-005 -6.18922082914915e-005 -6.01260400732796e-005 -5.82037226052586e-005 -5.61279036717484e-005 -5.39008516879744e-005 -5.15256742090222e-005 -4.90058424818346e-005 -4.63448865057348e-005 -4.35474188687337e-005 -4.0617401347798e-005 -3.75597940593211e-005 -3.4380113969789e-005 -3.10832162806263e-005 -2.76758717417088e-005 -2.41636559511222e-005 -2.05531503330006e-005 -1.6851051523328e-005 -1.30648235330932e-005 -9.20125558178956e-006 -5.26854779432416e-006 -1.27437212576303e-006 2.77298148827413e-006 6.86559807955728e-006 1.09943409209374e-005 1.51507685327681e-005 1.93257949597498e-005 2.35107320706237e-005 2.76958680766311e-005 3.18722109742412e-005 3.60300562015787e-005 4.01602326473272e-005 4.42527224140763e-005 4.82982653840829e-005 5.2287053309743e-005 5.62098682627262e-005 6.00567276166566e-005 6.38182889848762e-005 6.74848975761577e-005 7.10474244440614e-005 7.44966446913965e-005 7.78232911778911e-005 8.1018634843153e-005 8.40737456355217e-005 8.69801520667827e-005 8.97298300008805e-005 9.23139842862048e-005 9.47257201127471e-005 9.69567869338016e-005 9.90005280472991e-005 0.000100849918837788 0.000102498576713449 0.000103939905146351 0.000105168835813054 0.000106179596018522 0.000106967562115297 0.000107528041314022 0.000107857444692596 0.00010795169490749 0.000107808141008663 0.000107424075911631 0.000106797830396431 0.000105927364537454 0.000104812072057762 0.000103451248474447 0.00010184532194643 9.99945117079796e-005 9.79003697258861e-005 9.55644321350169e-005 9.29893486258684e-005 9.01776699717086e-005 8.71331379573368e-005 8.38596783698526e-005 8.03620377588851e-005 7.66452245938823e-005 7.27148692568697e-005 6.8577221853207e-005 6.42393093641925e-005 5.97080838712166e-005 5.49920335338265e-005 5.00985715594485e-005 4.50374623095432e-005 3.9817357553359e-005 3.44484156650113e-005 2.89406480034824e-005 2.33049918507705e-005 1.75520422625395e-005 1.16939398866639e-005 5.74201727681811e-006 -2.91315231653853e-007 -6.39385400864882e-006 -1.25522979414489e-005 -1.8754073521265e-005 -2.4985436580555e-005 -3.12331229062721e-005 -3.74830609470681e-005 -4.37218878249563e-005 -4.9935090263196e-005 -5.61087858994986e-005 -6.22284296992861e-005 -6.82802328379739e-005 -7.42495454591133e-005 -8.01224057015011e-005 -8.58842991829856e-005 -9.15215027186934e-005 -9.701971150874e-005 -0.000102365295207186 -0.000107544408672111 -0.000112543898182588 -0.000117350352331578 -0.000121951151913706 -0.000126333201395371 -0.00013048504395439 -0.000134393987408105 -0.000138049495710366 -0.000141439704539617 -0.000144554620523744 -0.00014738397108187 -0.00014991854241007 -0.000152149021747642 -0.000154067593576773 -0.000155665860389399 -0.000156937176130066 -0.000157874763419867 -0.000158473133196618 -0.000158726659163477 -0.000158631541816864 -0.000158183743460147 -0.000157380702997016 -0.000156219860090426 -0.000154700368827788 -0.000152821151638687 -0.000150582802962859 -0.000147986051670022 -0.000145033230675512 -0.000141726513870276 -0.000138069710586991 -0.00013406677879103 -0.000129723307866824 -0.000125044857118204 -0.000120038504654641 -0.000114711492719379 -0.000109072622795862 -0.000103130570988613 -9.68958278233193e-005 -9.03783953301742e-005 -8.35906426456669e-005 -7.65438459185589e-005 -6.92516744230625e-005 -6.17270789384197e-005 -5.39847434778144e-005 -4.6039353658584e-005 -3.79066796339822e-005 -2.96023210569902e-005 -2.11435268890079e-005 -1.25469165101851e-005 -3.8306408394735e-006 4.98751060431537e-006 1.38886453865873e-005 2.28543814684681e-005 3.18648479719126e-005 4.09008880453677e-005 4.99422915095448e-005 5.89694295285811e-005 6.79614781441756e-005 7.68985475237512e-005 8.57597717450071e-005 9.45250133795252e-005 0.00010317327208005 0.000111684582357029 0.000120038090452604 0.000128213878802278 0.000136191375535578 0.000143951253239886 0.000151473548334141 0.000158739453550093 0.000165729510687185 0.000172425906559163 0.00017880995691026 0.00018486496396625 0.000190573135641379 0.000195918940523003 0.000200886084898982 0.000205459951478039 0.000209625946520939 0.000213370783200853 0.000216681443195465 0.00021954656576581 0.000221954504770861 0.000223895680311471 0.000225360528046598 0.000226341232388356 0.000226830185285849 0.000226821728226732 0.000226310138815276 0.000225291822204625 0.000223763463495294 0.000221723671505451 0.000219171133796633 0.000216106754436299 0.000212531689271764 0.000208449054684032 0.000203862225325163 0.000198776788329722 0.000193198481291133 0.000187135099836066 0.000180594688902327 0.000173587480945362 0.000166123773972157 0.000158216000609781 0.000149876609235458 0.000141120517820091 0.000131962274924681 0.000122418870652262 0.000112506880461052 0.000102245202566221 9.16527253629077e-005 8.07499116635571e-005 6.9557673009881e-005 5.80982714557487e-005 4.63941191625134e-005 3.4469306037746e-005 2.23475203667153e-005 1.00542496719387e-005 -2.38523546941191e-006 -1.49443702757647e-005 -2.75968908548484e-005 -4.031507090557e-005 -5.30718096852056e-005 -6.58386425947223e-005 -7.85876420415376e-005 -9.12898365146092e-005 -0.000103917066447149 -0.000116439978655211 -0.000128830048285283 -0.000141057985123183 -0.000153095498615707 -0.000164913378473915 -0.000176483629179387 -0.000187777609067411 -0.000198767927777438 -0.000209426556108335 -0.000219727036240461 -0.000229642380790925 -0.000239147308863014 -0.000248215916622196 -0.000256824364799631 -0.000264948407284188 -0.000272565678671354 -0.000279653796199589 -0.00028619198985892 -0.00029216015726867 -0.000297539632446801 -0.00030231230517604 -0.000306462020764781 -0.000309972854149838 -0.000312831238742678 -0.000315023933627308 -0.00031653986235185 -0.000317368669168291 -0.000317502241138719 -0.000316932917958452 -0.000315655534582108 -0.000313665560442305 -0.000310960826175619 -0.000307539929543316 -0.000303403969353284 -0.000298554644055554 -0.000292996135266597 -0.000286733501638789 -0.000279774296045824 -0.000272126640946642 -0.000263801255929192 -0.000254809621167652 -0.000245165701331674 -0.000234884051409644 -0.000223981840110032 -0.000212476763253877 -0.000200389049713542 -0.000187739328247522 -0.000174550784619189 -0.000160847120059524 -0.000146654088849983 -0.000131998222145097 -0.000116907772376854 -0.000101411931537523 -8.55414648258064e-005 -6.93275652619271e-005 -5.28034472505275e-005 -3.60023230815276e-005 -1.89593518597458e-005 -1.70966389499157e-006 1.57100952045188e-005 3.326322630306e-005 5.09115643504365e-005 6.86173234929644e-005 8.63412633235231e-005 0.000104044533928999 0.000121687237303263 0.000139230027775884 0.000156632532552778 0.000173855191917169 0.000190857626793561 0.000207600292513834 0.000224043036820617 0.000240146980884895 0.000255872684287086 0.000271181945891434 0.000286036337512119 0.000300399009542069 0.000314232885080797 0.000327502599892787 0.00034017283722747 0.00035221015443319 0.000363581373266414 0.000374255128863666 0.000384200878001462 0.000393389756388319 0.000401793924027127 0.000409387429603061 0.000416145328396194 0.000422045149777164 0.00042706504733642 0.00043118595011273 0.000434389714117449 0.000436660850659943 0.000437985104326419 0.000438350853879987 0.000437747697942685 0.000436168221049896 0.000433606230436743 0.000430058389379881 0.000425522840704756 0.000420000646628994 0.000413494228919998 0.000406009055128145 0.000397552073127673 0.000388133186930287 0.000377763746903162 0.000366458199358194 0.000354232318189011 0.000341104792881825 0.00032709581516054 0.000312228572772633 0.000296527484628648 0.0002800198154539 0.000262734182434871 0.000244701898065937 0.000225955599421737 0.000206530289355756 0.000186462471012311 0.000165790768265407 0.000144555039527192 0.000122797394611582 0.000100560722824032 7.78903556566198e-005 5.483190263072e-005 3.14332639288673e-005 7.7427757512529e-006 -1.61894368814623e-005 -4.03129170391606e-005 -6.45756117845664e-005 -8.89254506059363e-005 -0.000113308798077951 -0.000137672263645437 -0.000161961323398851 -0.000186121741270031 -0.000210098315280456 -0.000233836541188393 -0.000257281134686503 -0.000280377661066372 -0.000303071242695845 -0.000325308145817627 -0.000347034305668816 -0.000368197066381361 -0.000388743837210327 -0.000408623541323211 -0.00042778535414671 -0.000446180394531353 -0.000463760309596198 -0.000480478644878811 -0.000496289833452435 -0.000511150454951037 -0.000525018352482441 -0.000537853559686912 -0.000549617523062311 -0.000560274371856901 -0.000569789491880357 -0.000578131438982432 -0.000585270010540743 -0.000591178446921884 -0.000595831542730978 -0.000599207322641377 -0.000601285829658735 -0.00060205046901338 -0.000601486642326499 -0.000599583330992671 -0.000596331548732449 -0.000591725999760351 -0.000585763675981551 -0.000578445172374481 -0.000569773343378428 -0.000559754883331515 -0.000548398747379526 -0.000535717639496872 -0.000521726606105399 -0.000506444499143247 -0.000489892404534179 -0.000472095169719069 -0.000453079978530089 -0.000432877607988922 -0.000411521020202357 -0.000389046819169586 -0.000365493743237036 -0.000340903821286296 -0.000315321250555347 -0.00028879344460421 -0.000261369792640507 -0.000233102660760156 -0.000204046076415939 -0.000174257260185025 -0.000143794567146835 -0.000112719474277689 -8.10943368890682e-005 -4.89842819954333e-005 -1.64553293062602e-005 1.64243143636392e-005 4.95855914023806e-005 8.29574547056922e-005 0.000116468515536989 0.000150045580805142 0.000183615393132008 0.000217103243346892 0.000250434577133445 0.000283533807005398 0.000316325888121855 0.000348734868801099 0.000380685700182283 0.000412102903816799 0.000442912176979351 0.000473039053957889 0.000502410646528787 0.000530954282620267 0.000558599074274567 0.000585274748814066 0.000610913237282536 0.000635447304182879 0.00065881218523922 0.000680944480624879 0.00070178347417464 0.000721270007240286 0.000739348063904244 0.000755963423194143 0.000771065431924958 0.000784605168176805 0.000796537831716425 0.000806820665433545 0.000815415082087162 0.000822284969576606 0.000827398335310961 0.000830726141238383 0.000832243613601723 0.000831928966078972 0.000829765080086269 0.000825737879510143 0.00081983801283833 0.000812059395104008 0.000802400751126782 0.000790864194469592 0.000777456781530151 0.00076218886592757 0.000745075826500635 0.000726136503574014 0.000705394675793045 0.000682877490185688 0.000658617075651662 0.000632648960486494 0.000605013489857194 0.000575754335978056 0.000544919972845644 0.000512561985588367 0.000478736558735628 0.000443503000864426 0.000406925009956834 0.000369069039903804 0.000330005942534334 0.000289808989558087 0.000248555699401699 0.000206325537989412 0.000163202078970079 0.000119270725463561 7.46203201453207e-005 2.93414667698033e-005 -1.64722746080532e-005 -6.27258040340063e-005 -0.000109321398041267 -0.000156160421730074 -0.000203141791994072 -0.000250163933117493 -0.000297123326322071 -0.000343916273425169 -0.000390437571469806 -0.000436582333990356 -0.000482244564693971 -0.000527319107299755 -0.000571700108599074 -0.000615282894872313 -0.000657962666089929 -0.000699636333456156 -0.00074020105904819 -0.000779556117641409 -0.000817601599151717 -0.000854240198914977 -0.000889375773351547 -0.000922915291623525 -0.000954767400398926 -0.000984844196237727 -0.00101305988290413 -0.00103933276362507 -0.00106358343669465 -0.00108573708313786 -0.00110572157096277 -0.00112346979921972 -0.00113891774810588 -0.00115200654654038 -0.00116268115519388 -0.00117089179308618 -0.00117659282512303 -0.00117974423372249 -0.00118031033074509 -0.00117826154941222 -0.00117357270304219 -0.001166224915854 -0.00115620406224684 -0.00114350245545323 -0.00112811729190821 -0.00111005240945435 -0.00108931658697404 -0.00106592536928742 -0.00103989933595335 -0.00101126581717701 -0.000980057299356371 -0.000946313045683395 -0.000910077341344637 -0.000871401173089805 -0.000830340577785895 -0.000786958241026618 -0.000741321647901927 -0.000693504812317164 -0.000643586454693943 -0.000591651557177111 -0.000537789511829983 -0.0004820959303154 -0.000424670371069968 -0.000365618326096698 -0.000305049028603816 -0.000243077224933565 -0.000179821131425388 -0.000115403813149715 -4.99517203629577e-005 1.64043961456087e-005 8.35309989176811e-005 0.000151290509253195 0.000219543199309463 0.000288145661630329 0.000356953003673966 0.000425817264946132 0.000494589363058385 0.000563117771528534 0.00063125052179533 0.00069883373365969 0.000765713708043752 0.000831735453544571 0.00089674475986329 0.000960586839122603 0.00102310827992899 0.00108415571666639 0.00114357788765575 0.0012012242065788 0.0012569467796936 0.00131059904562028 0.0013620379254067 0.00141112229696766 0.00145771506032555 0.00150168175578287 0.00154289269911734 0.00158122130398683 0.00161654648740835 0.00164875095869234 0.00167772333009655 0.00170335675595835 0.00172555074678465 0.00174421010709473 0.00175924633084858 0.00177057671034969 0.00177812601219689 0.00178182500730471 0.00178161253283571 0.0017774338197442 0.00176924260415195 0.0017569994849113 0.00174067375967013 0.00172024199519638 0.00169568989730181 0.00166701063510306 0.00163420672396149 0.0015972884074524 0.00155627545542404 0.00151119558922402 0.00146208614760658 0.00140899247755191 0.00135196968428993 0.00129108089291024 0.00122639894948719 0.00115800469248491 0.00108598868463658 0.00101044934003095 0.000931494572538505 0.000849240037933661 0.000763810817039953 0.000675339335603717 0.000583967151256102 0.000489843022759014 0.000393124268541567 0.000293975214131516 0.000192568268041856 8.90824746602115e-005 -1.62955685699789e-005 -0.000123373267307736 -0.000231950671409015 -0.000341822679045962 -0.000452777375921905 -0.000564598238637406 -0.000677062636122803 -0.000789943915829701 -0.000903010148444394 -0.00101602606366096 -0.00112875175102331 -0.00124094482273107 -0.00135235909453005 -0.00146274660684569 -0.00157185642804942 -0.00167943669209525 -0.00178523346324137 -0.00188899277805278 -0.00199045938800573 -0.00208937891993868 -0.00218549665604408 -0.0022785596479416 -0.00236831548015929 -0.0024545144393023 -0.00253690832105374 -0.00261525249439912 -0.002689304665405 -0.00275882714643631 -0.00282358557236607 -0.00288335083502786 -0.00293789826031162 -0.0029870092320871 -0.00303047044157774 -0.00306807556267397 -0.0030996243345135 -0.00312492449239913 -0.00314379033724632 -0.00315604517993421 -0.0031615197421782 -0.00316005431785048 -0.0031514974555536 -0.0031357079181867 -0.00311255347250339 -0.00308191272077572 -0.00304367379531781 -0.00299773633772461 -0.0029440101421724 -0.00288241692348191 -0.00281288904878694 -0.0027353713078628 -0.00264981956552419 -0.00255620248871058 -0.00245450007290149 -0.002344705463402 -0.00222682347354141 -0.00210087224750517 -0.0019668817419201 -0.00182489538208832 -0.00167496854892649 -0.00151717012958238 -0.00135158093077978 -0.0011782952929526 -0.000997419506618119 -0.000809073016564012 -0.000613387231318919 -0.000410506545057996 -0.000200586932321852 1.62028005988537e-005 0.000239682752547411 0.000469660366326768 0.000705932608771142 0.000948284161449438 0.00119648957390806 0.00145031193230771 0.0017095046316709 0.00197381020786949 0.00224296214131704 0.00251668375546135 0.00279469011756543 0.0030766868350166 0.00336237199755774 0.00365143516634151 0.00394355923107679 0.00423841935512198 0.00453568496628595 0.00483501871843049 0.00513607854699763 0.0054385165510872 0.00574198105400928 0.0060461156599404 0.00635056126297027 0.00665495505770542 0.00695893255950676 0.00726212669937581 0.00756416988137252 0.00786469303973814 0.00816332757396934 0.00845970473231056 0.00875345725609361 0.00904421872031805 0.00933162557404492 0.00961531605604692 0.00989493251930481 0.0101701200869359 0.0104405291877842 0.0107058141817969 0.0109656355851868 0.0112196591973374 0.0114675579143191 0.01170901088085 0.0119437054315103 0.0121713361627082 0.012391606864597 0.0126042294696477 0.0128089259861763 0.0130054275581682 0.0131934762861027 0.0133728241553317 0.0135432349578642 0.0137044831598754 0.0138563557798857 0.0139986511699218 0.0141311808460029 0.0142537683910013 0.0143662511386123 0.0144684789567841 0.014560315959006 0.0146416393005781 0.0147123408139995 0.0147723257421932 0.0148215142054366 0.0148598401523623 0.0148872526785048 0.0149037146795419 0.0149092046177703 0.0149037146795419 0.0148872526785048 0.0148598401523623 0.0148215142054366 0.0147723257421932 0.0147123408139995 0.0146416393005781 0.014560315959006 0.0144684789567841 0.0143662511386123 0.0142537683910013 0.0141311808460029 0.0139986511699218 0.0138563557798857 0.0137044831598754 0.0135432349578642 0.0133728241553317 0.0131934762861027 0.0130054275581682 0.0128089259861763 0.0126042294696477 0.012391606864597 0.0121713361627082 0.0119437054315103 0.01170901088085 0.0114675579143191 0.0112196591973374 0.0109656355851868 0.0107058141817969 0.0104405291877842 0.0101701200869359 0.00989493251930481 0.00961531605604692 0.00933162557404492 0.00904421872031805 0.00875345725609361 0.00845970473231056 0.00816332757396934 0.00786469303973814 0.00756416988137252 0.00726212669937581 0.00695893255950676 0.00665495505770542 0.00635056126297027 0.0060461156599404 0.00574198105400928 0.0054385165510872 0.00513607854699763 0.00483501871843049 0.00453568496628595 0.00423841935512198 0.00394355923107679 0.00365143516634151 0.00336237199755774 0.0030766868350166 0.00279469011756543 0.00251668375546135 0.00224296214131704 0.00197381020786949 0.0017095046316709 0.00145031193230771 0.00119648957390806 0.000948284161449438 0.000705932608771142 0.000469660366326768 0.000239682752547411 1.62028005988537e-005 -0.000200586932321852 -0.000410506545057996 -0.000613387231318919 -0.000809073016564012 -0.000997419506618119 -0.0011782952929526 -0.00135158093077978 -0.00151717012958238 -0.00167496854892649 -0.00182489538208832 -0.0019668817419201 -0.00210087224750517 -0.00222682347354141 -0.002344705463402 -0.00245450007290149 -0.00255620248871058 -0.00264981956552419 -0.0027353713078628 -0.00281288904878694 -0.00288241692348191 -0.0029440101421724 -0.00299773633772461 -0.00304367379531781 -0.00308191272077572 -0.00311255347250339 -0.0031357079181867 -0.0031514974555536 -0.00316005431785048 -0.0031615197421782 -0.00315604517993421 -0.00314379033724632 -0.00312492449239913 -0.0030996243345135 -0.00306807556267397 -0.00303047044157774 -0.0029870092320871 -0.00293789826031162 -0.00288335083502786 -0.00282358557236607 -0.00275882714643631 -0.002689304665405 -0.00261525249439912 -0.00253690832105374 -0.0024545144393023 -0.00236831548015929 -0.0022785596479416 -0.00218549665604408 -0.00208937891993868 -0.00199045938800573 -0.00188899277805278 -0.00178523346324137 -0.00167943669209525 -0.00157185642804942 -0.00146274660684569 -0.00135235909453005 -0.00124094482273107 -0.00112875175102331 -0.00101602606366096 -0.000903010148444394 -0.000789943915829701 -0.000677062636122803 -0.000564598238637406 -0.000452777375921905 -0.000341822679045962 -0.000231950671409015 -0.000123373267307736 -1.62955685699789e-005 8.90824746602115e-005 0.000192568268041856 0.000293975214131516 0.000393124268541567 0.000489843022759014 0.000583967151256102 0.000675339335603717 0.000763810817039953 0.000849240037933661 0.000931494572538505 0.00101044934003095 0.00108598868463658 0.00115800469248491 0.00122639894948719 0.00129108089291024 0.00135196968428993 0.00140899247755191 0.00146208614760658 0.00151119558922402 0.00155627545542404 0.0015972884074524 0.00163420672396149 0.00166701063510306 0.00169568989730181 0.00172024199519638 0.00174067375967013 0.0017569994849113 0.00176924260415195 0.0017774338197442 0.00178161253283571 0.00178182500730471 0.00177812601219689 0.00177057671034969 0.00175924633084858 0.00174421010709473 0.00172555074678465 0.00170335675595835 0.00167772333009655 0.00164875095869234 0.00161654648740835 0.00158122130398683 0.00154289269911734 0.00150168175578287 0.00145771506032555 0.00141112229696766 0.0013620379254067 0.00131059904562028 0.0012569467796936 0.0012012242065788 0.00114357788765575 0.00108415571666639 0.00102310827992899 0.000960586839122603 0.00089674475986329 0.000831735453544571 0.000765713708043752 0.00069883373365969 0.00063125052179533 0.000563117771528534 0.000494589363058385 0.000425817264946132 0.000356953003673966 0.000288145661630329 0.000219543199309463 0.000151290509253195 8.35309989176811e-005 1.64043961456087e-005 -4.99517203629577e-005 -0.000115403813149715 -0.000179821131425388 -0.000243077224933565 -0.000305049028603816 -0.000365618326096698 -0.000424670371069968 -0.0004820959303154 -0.000537789511829983 -0.000591651557177111 -0.000643586454693943 -0.000693504812317164 -0.000741321647901927 -0.000786958241026618 -0.000830340577785895 -0.000871401173089805 -0.000910077341344637 -0.000946313045683395 -0.000980057299356371 -0.00101126581717701 -0.00103989933595335 -0.00106592536928742 -0.00108931658697404 -0.00111005240945435 -0.00112811729190821 -0.00114350245545323 -0.00115620406224684 -0.001166224915854 -0.00117357270304219 -0.00117826154941222 -0.00118031033074509 -0.00117974423372249 -0.00117659282512303 -0.00117089179308618 -0.00116268115519388 -0.00115200654654038 -0.00113891774810588 -0.00112346979921972 -0.00110572157096277 -0.00108573708313786 -0.00106358343669465 -0.00103933276362507 -0.00101305988290413 -0.000984844196237727 -0.000954767400398926 -0.000922915291623525 -0.000889375773351547 -0.000854240198914977 -0.000817601599151717 -0.000779556117641409 -0.00074020105904819 -0.000699636333456156 -0.000657962666089929 -0.000615282894872313 -0.000571700108599074 -0.000527319107299755 -0.000482244564693971 -0.000436582333990356 -0.000390437571469806 -0.000343916273425169 -0.000297123326322071 -0.000250163933117493 -0.000203141791994072 -0.000156160421730074 -0.000109321398041267 -6.27258040340063e-005 -1.64722746080532e-005 2.93414667698033e-005 7.46203201453207e-005 0.000119270725463561 0.000163202078970079 0.000206325537989412 0.000248555699401699 0.000289808989558087 0.000330005942534334 0.000369069039903804 0.000406925009956834 0.000443503000864426 0.000478736558735628 0.000512561985588367 0.000544919972845644 0.000575754335978056 0.000605013489857194 0.000632648960486494 0.000658617075651662 0.000682877490185688 0.000705394675793045 0.000726136503574014 0.000745075826500635 0.00076218886592757 0.000777456781530151 0.000790864194469592 0.000802400751126782 0.000812059395104008 0.00081983801283833 0.000825737879510143 0.000829765080086269 0.000831928966078972 0.000832243613601723 0.000830726141238383 0.000827398335310961 0.000822284969576606 0.000815415082087162 0.000806820665433545 0.000796537831716425 0.000784605168176805 0.000771065431924958 0.000755963423194143 0.000739348063904244 0.000721270007240286 0.00070178347417464 0.000680944480624879 0.00065881218523922 0.000635447304182879 0.000610913237282536 0.000585274748814066 0.000558599074274567 0.000530954282620267 0.000502410646528787 0.000473039053957889 0.000442912176979351 0.000412102903816799 0.000380685700182283 0.000348734868801099 0.000316325888121855 0.000283533807005398 0.000250434577133445 0.000217103243346892 0.000183615393132008 0.000150045580805142 0.000116468515536989 8.29574547056922e-005 4.95855914023806e-005 1.64243143636392e-005 -1.64553293062602e-005 -4.89842819954333e-005 -8.10943368890682e-005 -0.000112719474277689 -0.000143794567146835 -0.000174257260185025 -0.000204046076415939 -0.000233102660760156 -0.000261369792640507 -0.00028879344460421 -0.000315321250555347 -0.000340903821286296 -0.000365493743237036 -0.000389046819169586 -0.000411521020202357 -0.000432877607988922 -0.000453079978530089 -0.000472095169719069 -0.000489892404534179 -0.000506444499143247 -0.000521726606105399 -0.000535717639496872 -0.000548398747379526 -0.000559754883331515 -0.000569773343378428 -0.000578445172374481 -0.000585763675981551 -0.000591725999760351 -0.000596331548732449 -0.000599583330992671 -0.000601486642326499 -0.00060205046901338 -0.000601285829658735 -0.000599207322641377 -0.000595831542730978 -0.000591178446921884 -0.000585270010540743 -0.000578131438982432 -0.000569789491880357 -0.000560274371856901 -0.000549617523062311 -0.000537853559686912 -0.000525018352482441 -0.000511150454951037 -0.000496289833452435 -0.000480478644878811 -0.000463760309596198 -0.000446180394531353 -0.00042778535414671 -0.000408623541323211 -0.000388743837210327 -0.000368197066381361 -0.000347034305668816 -0.000325308145817627 -0.000303071242695845 -0.000280377661066372 -0.000257281134686503 -0.000233836541188393 -0.000210098315280456 -0.000186121741270031 -0.000161961323398851 -0.000137672263645437 -0.000113308798077951 -8.89254506059363e-005 -6.45756117845664e-005 -4.03129170391606e-005 -1.61894368814623e-005 7.7427757512529e-006 3.14332639288673e-005 5.483190263072e-005 7.78903556566198e-005 0.000100560722824032 0.000122797394611582 0.000144555039527192 0.000165790768265407 0.000186462471012311 0.000206530289355756 0.000225955599421737 0.000244701898065937 0.000262734182434871 0.0002800198154539 0.000296527484628648 0.000312228572772633 0.00032709581516054 0.000341104792881825 0.000354232318189011 0.000366458199358194 0.000377763746903162 0.000388133186930287 0.000397552073127673 0.000406009055128145 0.000413494228919998 0.000420000646628994 0.000425522840704756 0.000430058389379881 0.000433606230436743 0.000436168221049896 0.000437747697942685 0.000438350853879987 0.000437985104326419 0.000436660850659943 0.000434389714117449 0.00043118595011273 0.00042706504733642 0.000422045149777164 0.000416145328396194 0.000409387429603061 0.000401793924027127 0.000393389756388319 0.000384200878001462 0.000374255128863666 0.000363581373266414 0.00035221015443319 0.00034017283722747 0.000327502599892787 0.000314232885080797 0.000300399009542069 0.000286036337512119 0.000271181945891434 0.000255872684287086 0.000240146980884895 0.000224043036820617 0.000207600292513834 0.000190857626793561 0.000173855191917169 0.000156632532552778 0.000139230027775884 0.000121687237303263 0.000104044533928999 8.63412633235231e-005 6.86173234929644e-005 5.09115643504365e-005 3.326322630306e-005 1.57100952045188e-005 -1.70966389499157e-006 -1.89593518597458e-005 -3.60023230815276e-005 -5.28034472505275e-005 -6.93275652619271e-005 -8.55414648258064e-005 -0.000101411931537523 -0.000116907772376854 -0.000131998222145097 -0.000146654088849983 -0.000160847120059524 -0.000174550784619189 -0.000187739328247522 -0.000200389049713542 -0.000212476763253877 -0.000223981840110032 -0.000234884051409644 -0.000245165701331674 -0.000254809621167652 -0.000263801255929192 -0.000272126640946642 -0.000279774296045824 -0.000286733501638789 -0.000292996135266597 -0.000298554644055554 -0.000303403969353284 -0.000307539929543316 -0.000310960826175619 -0.000313665560442305 -0.000315655534582108 -0.000316932917958452 -0.000317502241138719 -0.000317368669168291 -0.00031653986235185 -0.000315023933627308 -0.000312831238742678 -0.000309972854149838 -0.000306462020764781 -0.00030231230517604 -0.000297539632446801 -0.00029216015726867 -0.00028619198985892 -0.000279653796199589 -0.000272565678671354 -0.000264948407284188 -0.000256824364799631 -0.000248215916622196 -0.000239147308863014 -0.000229642380790925 -0.000219727036240461 -0.000209426556108335 -0.000198767927777438 -0.000187777609067411 -0.000176483629179387 -0.000164913378473915 -0.000153095498615707 -0.000141057985123183 -0.000128830048285283 -0.000116439978655211 -0.000103917066447149 -9.12898365146092e-005 -7.85876420415376e-005 -6.58386425947223e-005 -5.30718096852056e-005 -4.031507090557e-005 -2.75968908548484e-005 -1.49443702757647e-005 -2.38523546941191e-006 1.00542496719387e-005 2.23475203667153e-005 3.4469306037746e-005 4.63941191625134e-005 5.80982714557487e-005 6.9557673009881e-005 8.07499116635571e-005 9.16527253629077e-005 0.000102245202566221 0.000112506880461052 0.000122418870652262 0.000131962274924681 0.000141120517820091 0.000149876609235458 0.000158216000609781 0.000166123773972157 0.000173587480945362 0.000180594688902327 0.000187135099836066 0.000193198481291133 0.000198776788329722 0.000203862225325163 0.000208449054684032 0.000212531689271764 0.000216106754436299 0.000219171133796633 0.000221723671505451 0.000223763463495294 0.000225291822204625 0.000226310138815276 0.000226821728226732 0.000226830185285849 0.000226341232388356 0.000225360528046598 0.000223895680311471 0.000221954504770861 0.00021954656576581 0.000216681443195465 0.000213370783200853 0.000209625946520939 0.000205459951478039 0.000200886084898982 0.000195918940523003 0.000190573135641379 0.00018486496396625 0.00017880995691026 0.000172425906559163 0.000165729510687185 0.000158739453550093 0.000151473548334141 0.000143951253239886 0.000136191375535578 0.000128213878802278 0.000120038090452604 0.000111684582357029 0.00010317327208005 9.45250133795252e-005 8.57597717450071e-005 7.68985475237512e-005 6.79614781441756e-005 5.89694295285811e-005 4.99422915095448e-005 4.09008880453677e-005 3.18648479719126e-005 2.28543814684681e-005 1.38886453865873e-005 4.98751060431537e-006 -3.8306408394735e-006 -1.25469165101851e-005 -2.11435268890079e-005 -2.96023210569902e-005 -3.79066796339822e-005 -4.6039353658584e-005 -5.39847434778144e-005 -6.17270789384197e-005 -6.92516744230625e-005 -7.65438459185589e-005 -8.35906426456669e-005 -9.03783953301742e-005 -9.68958278233193e-005 -0.000103130570988613 -0.000109072622795862 -0.000114711492719379 -0.000120038504654641 -0.000125044857118204 -0.000129723307866824 -0.00013406677879103 -0.000138069710586991 -0.000141726513870276 -0.000145033230675512 -0.000147986051670022 -0.000150582802962859 -0.000152821151638687 -0.000154700368827788 -0.000156219860090426 -0.000157380702997016 -0.000158183743460147 -0.000158631541816864 -0.000158726659163477 -0.000158473133196618 -0.000157874763419867 -0.000156937176130066 -0.000155665860389399 -0.000154067593576773 -0.000152149021747642 -0.00014991854241007 -0.00014738397108187 -0.000144554620523744 -0.000141439704539617 -0.000138049495710366 -0.000134393987408105 -0.00013048504395439 -0.000126333201395371 -0.000121951151913706 -0.000117350352331578 -0.000112543898182588 -0.000107544408672111 -0.000102365295207186 -9.701971150874e-005 -9.15215027186934e-005 -8.58842991829856e-005 -8.01224057015011e-005 -7.42495454591133e-005 -6.82802328379739e-005 -6.22284296992861e-005 -5.61087858994986e-005 -4.9935090263196e-005 -4.37218878249563e-005 -3.74830609470681e-005 -3.12331229062721e-005 -2.4985436580555e-005 -1.8754073521265e-005 -1.25522979414489e-005 -6.39385400864882e-006 -2.91315231653853e-007 5.74201727681811e-006 1.16939398866639e-005 1.75520422625395e-005 2.33049918507705e-005 2.89406480034824e-005 3.44484156650113e-005 3.9817357553359e-005 4.50374623095432e-005 5.00985715594485e-005 5.49920335338265e-005 5.97080838712166e-005 6.42393093641925e-005 6.8577221853207e-005 7.27148692568697e-005 7.66452245938823e-005 8.03620377588851e-005 8.38596783698526e-005 8.71331379573368e-005 9.01776699717086e-005 9.29893486258684e-005 9.55644321350169e-005 9.79003697258861e-005 9.99945117079796e-005 0.00010184532194643 0.000103451248474447 0.000104812072057762 0.000105927364537454 0.000106797830396431 0.000107424075911631 0.000107808141008663 0.00010795169490749 0.000107857444692596 0.000107528041314022 0.000106967562115297 0.000106179596018522 0.000105168835813054 0.000103939905146351 0.000102498576713449 0.000100849918837788 9.90005280472991e-005 9.69567869338016e-005 9.47257201127471e-005 9.23139842862048e-005 8.97298300008805e-005 8.69801520667827e-005 8.40737456355217e-005 8.1018634843153e-005 7.78232911778911e-005 7.44966446913965e-005 7.10474244440614e-005 6.74848975761577e-005 6.38182889848762e-005 6.00567276166566e-005 5.62098682627262e-005 5.2287053309743e-005 4.82982653840829e-005 4.42527224140763e-005 4.01602326473272e-005 3.60300562015787e-005 3.18722109742412e-005 2.76958680766311e-005 2.35107320706237e-005 1.93257949597498e-005 1.51507685327681e-005 1.09943409209374e-005 6.86559807955728e-006 2.77298148827413e-006 -1.27437212576303e-006 -5.26854779432416e-006 -9.20125558178956e-006 -1.30648235330932e-005 -1.6851051523328e-005 -2.05531503330006e-005 -2.41636559511222e-005 -2.76758717417088e-005 -3.10832162806263e-005 -3.4380113969789e-005 -3.75597940593211e-005 -4.0617401347798e-005 -4.35474188687337e-005 -4.63448865057348e-005 -4.90058424818346e-005 -5.15256742090222e-005 -5.39008516879744e-005 -5.61279036717484e-005 -5.82037226052586e-005 -6.01260400732796e-005 -6.18922082914915e-005 -6.35006772151759e-005 -6.49495379764627e-005 -6.62381539718908e-005 -6.73653848913012e-005 -6.83310932195394e-005 -6.91347367635392e-005 -6.97771449563401e-005 -7.02587675927147e-005 -7.05809929569828e-005 -7.07446375604347e-005 -7.07517966531855e-005 -7.06042793674669e-005 -7.03047513995788e-005 -6.98553329208555e-005 -6.92595253174921e-005 -6.85204276407002e-005 -6.76417216034933e-005 -6.662656879111e-005 -6.54796411125225e-005 -6.42049666629587e-005 -6.28070509789246e-005 -6.12904227247645e-005 -5.96606505041286e-005 -5.79219488969705e-005 -5.60801067454271e-005 -5.41407879808797e-005 -5.21089409728238e-005 -4.99909212744647e-005 -4.779201665393e-005 -4.55182053122891e-005 -4.31759118228741e-005 -4.07708175607804e-005 -3.83096776799284e-005 -3.57979409015787e-005 -3.32423601744765e-005 -3.06486440924228e-005 -2.8023652582783e-005 -2.53730414981784e-005 -2.27033984887462e-005 -2.0020366036299e-005 -1.73306829349789e-005 -1.46399411218251e-005 -1.19543963278102e-005 -9.27931239254005e-006 -6.62104231315159e-006 -3.98496928427692e-006 -1.37690015889026e-006 1.19850479991657e-006 3.73548706935855e-006 6.22921233115785e-006 8.67455494003521e-006 1.10673615684488e-005 1.34023056420664e-005 1.567528259524e-005 1.78823051566146e-005 2.00197755163465e-005 2.20831406101238e-005 2.40696804062534e-005 2.59758986650618e-005 2.77980966549151e-005 2.95344286283765e-005 3.11817602984986e-005 3.27376965139159e-005 3.42006433441466e-005 3.55677060006238e-005 3.68383548705271e-005 3.80102108467889e-005 3.90830515503957e-005 4.00549607038057e-005 4.09259201198379e-005 4.16947899366796e-005 4.23622309994709e-005 4.29276808144418e-005 4.33919182785264e-005 4.37545757687923e-005 4.40169537563336e-005 4.41794969520443e-005 4.42439031675609e-005 4.42107040325615e-005 4.4081910004587e-005 4.38589048428408e-005 4.35442864996768e-005 4.31392543732828e-005 4.26462932889378e-005 4.2067550552745e-005 4.14063450222028e-005 4.06645239027052e-005 3.98452181863933e-005 3.89514640803226e-005 3.7986718010505e-005 3.69530754009405e-005 3.58547255333079e-005 3.46953231137004e-005 3.34774445821306e-005 3.22054075260706e-005 3.08827868258143e-005 2.95120906314855e-005 2.80987221645528e-005 2.66447234236773e-005 2.51557251724037e-005 2.36340926884087e-005 2.20848127005043e-005 2.05105529810757e-005 1.89161718301667e-005 1.73046918195343e-005 1.56808270505772e-005 1.40473763916787e-005 1.24087589945457e-005 1.07679108350554e-005 9.12948832550836e-006 7.49643115453994e-006 5.87280826839564e-006 4.26104414462528e-006 2.66529435443319e-006 1.08842224316742e-006 -4.65592957013276e-007 -1.99471514387164e-006 -3.4953924475679e-006 -4.96506454941461e-006 -6.40019637438412e-006 -7.79942657099687e-006 -9.15984671661692e-006 -1.04789934919347e-005 -1.17538614601501e-005 -1.29837062437593e-005 -1.4165563322453e-005 -1.5297239076741e-005 -1.6378107825718e-005 -1.74065609468611e-005 -1.83796636451349e-005 -1.92987549946551e-005 -2.01596324687454e-005 -2.09640725140508e-005 -2.1709188407436e-005 -2.23960563221684e-005 -2.30227257416574e-005 -2.35898069807831e-005 -2.40958358926005e-005 -2.45417713310435e-005 -2.49268338634968e-005 -2.52523122435392e-005 -2.55174472576414e-005 -2.57233485881017e-005 -2.58694517147958e-005 -2.59574541767688e-005 -2.59874463485179e-005 -2.59612596769591e-005 -2.58786936957182e-005 -2.57416490422431e-005 -2.55507406182284e-005 -2.53086471842211e-005 -2.50157122578988e-005 -2.46737271282319e-005 -2.42832630281073e-005 -2.38475378981462e-005 -2.33674682904989e-005 -2.28449636140741e-005 -2.22809929088541e-005 -2.16795973059757e-005 -2.10414746689456e-005 -2.03681220570147e-005 -1.96621709077627e-005 -1.89271227804299e-005 -1.81614198379814e-005 -1.73721743499725e-005 -1.6557361960285e-005 -1.5722291797911e-005 -1.48669844016962e-005 -1.39948646063552e-005 -1.31069929510391e-005 -1.22066400703126e-005 -1.12952557815384e-005 -1.03761550722017e-005 -9.45049303838782e-006 -8.52121235074221e-006 -7.58923677050474e-006 -6.65770229898759e-006 -5.72785477296596e-006 -4.80290798314314e-006 -3.8836096780257e-006 -2.97257001796215e-006 -2.0703284116168e-006 -1.18011136255105e-006 -3.03081212010611e-007 5.57771396078279e-007 1.40249577164911e-006 2.22877471347222e-006 3.03594631004846e-006 3.82060966862603e-006 4.58308951056204e-006 5.32193639834688e-006 6.03717286198122e-006 6.72464037253548e-006 7.38519650181956e-006 8.0182133965873e-006 8.62303106439748e-006 9.19501972815777e-006 9.74071213530745e-006 1.02524591509204e-005 1.07344849783013e-005 1.11839953027825e-005 1.16010858578809e-005 1.19851377636711e-005 1.23359924862388e-005 1.26533131128865e-005 1.29377174450497e-005 1.3188789625357e-005 1.34073463479953e-005 1.35925703287186e-005 1.37453066068296e-005 1.3864821369379e-005 1.39526353305602e-005 1.40084936488381e-005 1.40342134443906e-005 1.40289966823036e-005 1.39941223446797e-005 1.39285220410779e-005 1.38343308497875e-005 1.37115784405412e-005 1.35630197026232e-005 1.33876586413025e-005 1.31870907689413e-005 1.29603423782727e-005 1.27113476734474e-005 1.24402661260835e-005 1.21491508417921e-005 1.18347779752421e-005 1.1501595755956e-005 1.11507237228684e-005 1.07845165019174e-005 1.03961241773662e-005 9.99868488513386e-006 9.58466277051695e-006 9.15789014754869e-006 8.72161880365281e-006 8.27366149467831e-006 7.81788083672163e-006 7.35331974962638e-006 6.88208470617973e-006 6.40461366377309e-006 5.92239585030302e-006 5.43679761975195e-006 4.9490441253173e-006 4.46080384428176e-006 3.9725933377886e-006 3.48579071809432e-006 3.00015723143587e-006 2.51723717113145e-006 2.03697170915753e-006 1.56189731593155e-006 1.09226506478532e-006 6.30605543525479e-007 1.75793679903884e-007 -2.70732289220279e-007 -7.10846494538715e-007 -1.1415501968765e-006 -1.56289826517329e-006 -1.97052071697094e-006 -2.36710798789534e-006 -2.75159431264472e-006 -3.12800075717904e-006 -3.48874328670483e-006 -3.83401955134294e-006 -4.16155600384522e-006 -4.48580556034723e-006 -4.78659690402004e-006 -5.07102301413336e-006 -5.34827643472346e-006 -5.60212405026277e-006 -5.84668058135014e-006 -6.07254142810829e-006 -6.28578538645417e-006 -6.48225897487408e-006 -6.66483440906746e-006 -6.83104946879514e-006 -6.98238367840012e-006 -7.11727392514411e-006 -7.23653893398005e-006 -7.33956971085392e-006 -7.42707797821989e-006 -7.49955110139743e-006 -7.55771586095076e-006 -7.60282107295533e-006 -7.63501627507501e-006 -7.65541155261304e-006 -7.66271823557677e-006 -7.65751209128601e-006 -7.63736428406282e-006 -7.60384694343128e-006 -7.55554016300166e-006 -7.49731879243244e-006 -7.42908966098812e-006 -7.35666591949478e-006 -7.27502374181979e-006 -7.1850354195168e-006 -7.07534295461106e-006 -6.95495460798152e-006 -6.82652503989139e-006 -6.7177176233061e-006 -6.5873274394144e-006 -6.41916030653874e-006 -6.29670705116336e-006 -6.1319779994032e-006 -5.98156442936665e-006 -5.81687994870294e-006 -5.65584148286576e-006 -5.48613787011061e-006 -5.31896147362731e-006 -5.14579209170125e-006 -4.9753188968358e-006 -4.800897058436e-006 -4.62985561457222e-006 -4.45674935295447e-006 -4.28807690784027e-006 -4.11924776887857e-006 -3.95625120366779e-006 -3.79519422790614e-006 -3.64182441067023e-006 -3.49288760841827e-006 -3.35411175577608e-006 -3.22293122491583e-006 -3.10526988821609e-006 -2.99938731666961e-006 -2.91172216432913e-006 -2.84159739559419e-006 -2.79636876946116e-006 -2.77680534274625e-006 -2.79175810569639e-006 -2.84407867825443e-006 -2.94488775900927e-006 -3.10004007346292e-006 -3.32415900794419e-006 -3.62744882919974e-006 -4.02976869344532e-006 1.55406407911568e-005]"
+	  D			  "64"
+	  filtStruct		  "Direct form"
+	  framing		  "Maintain input frame size"
+	  outputBufInitCond	  "0"
+	  additionalParams	  off
+	  allowOverrides	  on
+	  firstCoeffMode	  "Same word length as input"
+	  firstCoeffWordLength	  "16"
+	  firstCoeffFracLength	  "15"
+	  outputMode		  "Same as accumulator"
+	  outputWordLength	  "16"
+	  outputFracLength	  "15"
+	  accumMode		  "Inherit via internal rule"
+	  accumWordLength	  "32"
+	  accumFracLength	  "30"
+	  prodOutputMode	  "Inherit via internal rule"
+	  prodOutputWordLength	  "32"
+	  prodOutputFracLength	  "30"
+	  roundingMode		  "Floor"
+	  overflowMode		  off
+	  LockScale		  off
+	  FilterSource		  "Filter object"
+	  FilterObject		  "h"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Digital Output\n48 KHz"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Digital sample Out"
+	  Position		  [510, 63, 540, 77]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Bit Stream In"
+	  SrcPort		  1
+	  DstBlock		  "One Stage Decimation\nDigital Filter"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Digital Output\n48 KHz"
+	  Labels		  [0, 0]
+	  SrcBlock		  "One Stage Decimation\nDigital Filter"
+	  SrcPort		  1
+	  Points		  [0, -5]
+	  DstBlock		  "Digital sample Out"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [2]
+      Position		      [1065, 148, 1120, 257]
+      FontSize		      18
+      FontWeight	      "bold"
+      Floating		      off
+      Location		      [674, 574, 1275, 875]
+      Open		      on
+      NumInputPorts	      "2"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+      }
+      TimeRange		      "0.008"
+      YMin		      "-1~-1"
+      YMax		      "1~1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Floating\nScope"
+      Ports		      []
+      Position		      [185, 14, 215, 46]
+      IOType		      "viewer"
+      Floating		      on
+      Location		      [390, 697, 714, 936]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      YMin		      "-1"
+      YMax		      "1"
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SignalViewerScope
+      Name		      "Scope1"
+      Ports		      []
+      Position		      [20, 15, 60, 55]
+      IOType		      "viewer"
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      ShowDataMarkers	      off
+      ShowLegends	      off
+      DataFormat	      "Array"
+      MaxDataPoints	      "7500"
+      RefreshTime	      0.035000
+    }
+    Block {
+      BlockType		      SignalViewerScope
+      Name		      "Scope2"
+      Ports		      []
+      Position		      [20, 15, 60, 55]
+      IOType		      "viewer"
+      Location		      [250, 662, 574, 901]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      ShowDataMarkers	      off
+      ShowLegends	      off
+      SaveName		      "ScopeData1"
+      DataFormat	      "Array"
+      MaxDataPoints	      "7500"
+      RefreshTime	      0.035000
+    }
+    Line {
+      Labels		      [0, 0]
+      SrcBlock		      "Analog\n Section"
+      SrcPort		      1
+      DstBlock		      "Digital\nSection"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Digtial Output"
+      FontSize		      18
+      FontWeight	      "bold"
+      Labels		      [1, 1]
+      SrcBlock		      "Digital\nSection"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Analog Input"
+      FontSize		      18
+      FontWeight	      "bold"
+      SrcBlock		      "Chirp Signal"
+      SrcPort		      1
+      Points		      [125, 0]
+      Branch {
+	Labels			[2, 1]
+	Points			[0, 145; 725, 0; 0, -90]
+	DstBlock		"Scope"
+	DstPort			2
+      }
+      Branch {
+	Labels			[-1, 1]
+	DstBlock		"Analog\n Section"
+	DstPort			1
+      }
+    }
+    Annotation {
+      Name		      "Executable Specification of \n\\Sigma-\\Delta ADC"
+      Position		      [581, 61]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+      TeXMode		      "on"
+      FontSize		      28
+    }
+  }
+}
+MatData {
+  NumRecords		  1
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    ,     8    (    !@         %    \"                0         )          "
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 6.7 (R2007b) dated Aug  7 2007, 16:48:14
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "high_level"
+    created		    "13-Feb-2007 13:44:38"
+    isLibrary		    0
+    firstTarget		    9
+    sfVersion		    67014000.000001
+  }
+  chart {
+    id			    2
+    name		    "Analog\n Section/1 bit DAC"
+    windowPosition	    [242.371 315 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 151 1400 1050 1.333333333333333]
+    treeNode		    [0 3 0 0]
+    firstTransition	    5
+    firstJunction	    4
+    viewObj		    2
+    machine		    1
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    6
+    chartFileNumber	    1
+    disableImplicitCasting  1
+    eml {
+      name		      "DAC_1_bit"
+      noDebugging	      1
+    }
+  }
+  state {
+    id			    3
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 0]
+    superState		    SUBCHART
+    subviewer		    2
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = DAC_1_bit(u)\n% This block supports an embeddable subset of the MATLAB language.\n% See the help menu for details.\n\n% This code converts boolean input to a bipolar output (double precision).\n% We chose to write this in EML function block but we could have also done \n% this with simulink blocks.\n\ny=-1+2*u;"
+      editorLayout	      "100 M4x1[835 425 787 638]"
+    }
+  }
+  junction {
+    id			    4
+    position		    [23.5747 49.5747 7]
+    chart		    2
+    linkNode		    [2 0 0]
+    subviewer		    2
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    5
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      4
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    2
+    linkNode		    [2 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+  }
+  data {
+    id			    6
+    name		    "u"
+    linkNode		    [2 0 7]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    7
+    name		    "y"
+    linkNode		    [2 6 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  instance {
+    id			    8
+    name		    "Analog\n Section/1 bit DAC"
+    machine		    1
+    chart		    2
+  }
+  target {
+    id			    9
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}
